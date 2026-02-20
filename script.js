@@ -83,6 +83,17 @@ function updateInfo(lat,lon){
   });
 }
 
+function showLiveLoading(){
+  document.getElementById("resultPanel")
+    .classList.remove("hidden");
+
+  document.getElementById("lat").innerText = "--";
+  document.getElementById("lon").innerText = "--";
+  document.getElementById("pincode").innerText = "Loading...";
+  document.getElementById("address").innerText =
+    "Getting live location...";
+}
+
 /* MODE SWITCH */
 function switchMode(mode){
 
@@ -106,13 +117,26 @@ function switchMode(mode){
   }
 
   if(mode==="live"){
-    watchId = navigator.geolocation.watchPosition(p=>{
+
+  // ⭐ show panel immediately
+  showLiveLoading();
+
+  watchId = navigator.geolocation.watchPosition(
+    p=>{
       updateInfo(
         p.coords.latitude,
         p.coords.longitude
       );
-    });
-  }
+    },
+    err=>{
+      document.getElementById("address").innerText =
+        "Location permission denied";
+    },
+    {
+      enableHighAccuracy:true
+    }
+  );
+}
 }
 
 /* PIN MODE */
