@@ -15,9 +15,7 @@ href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 <div class="app">
 
   <!-- HEADER -->
-  <div class="header">
-    📍 Smart Pincode Finder
-  </div>
+  <div class="header">📍 Smart Pincode Finder</div>
 
   <!-- MODE BUTTONS -->
   <div class="mode-buttons">
@@ -26,20 +24,20 @@ href="https://unpkg.com/leaflet/dist/leaflet.css"/>
     <button id="searchBtn" onclick="switchMode('search')">Search</button>
   </div>
 
-  <!-- MAP STYLE SWITCHER -->
-<div class="map-style">
-  <select id="mapStyle" onchange="changeMapStyle()">
-  <option value="streets">Streets</option>
-  <option value="satellite">Satellite</option>
-  <option value="hybrid">Hybrid</option>
-  <option value="terrain">Terrain</option>
-  <option value="dark">Dark</option>
-  <option value="light">Light</option>
-  <option value="voyager">Voyager</option>
-</select>
-</div>
+  <!-- MAP STYLE -->
+  <div class="map-style">
+    <select id="mapStyle" onchange="changeMapStyle()">
+      <option value="streets">Streets</option>
+      <option value="satellite">Satellite</option>
+      <option value="hybrid">Hybrid</option>
+      <option value="terrain">Terrain</option>
+      <option value="dark">Dark</option>
+      <option value="light">Light</option>
+      <option value="voyager">Voyager</option>
+    </select>
+  </div>
 
-  <!-- SEARCH PANEL -->
+  <!-- SEARCH -->
   <div id="searchUI" class="search-panel hidden">
     <input type="text" id="searchInput" placeholder="Search location...">
     <button onclick="searchLocation()">Search</button>
@@ -48,29 +46,12 @@ href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <!-- MAP -->
   <div id="map"></div>
 
-  <!-- FLOATING INFO PANEL -->
-  <div class="info-panel">
-
-    <div class="info-row">
-      <span>Latitude</span>
-      <span id="lat">--</span>
-    </div>
-
-    <div class="info-row">
-      <span>Longitude</span>
-      <span id="lon">--</span>
-    </div>
-
-    <div class="info-row">
-      <span>Pincode</span>
-      <span id="pincode">--</span>
-    </div>
-
-    <div class="info-row">
-      <span>Address</span>
-      <span id="address">--</span>
-    </div>
-
+  <!-- INFO PANEL -->
+  <div class="info-panel hidden" id="resultPanel">
+    <div class="info-row"><span>Latitude</span><span id="lat">--</span></div>
+    <div class="info-row"><span>Longitude</span><span id="lon">--</span></div>
+    <div class="info-row"><span>Pincode</span><span id="pincode">--</span></div>
+    <div class="info-row"><span>Address</span><span id="address">--</span></div>
   </div>
 
 </div>
