@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Pincode Finder</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <div class="header">
+    📍 Smart Pincode Finder
+  </div>
+
+  <!-- MODE BUTTONS -->
+  <div class="mode-buttons">
+    <button id="liveBtn" onclick="switchMode('live')">Live</button>
+    <button id="pinBtn" onclick="switchMode('pin')">Pin</button>
+    <button id="searchBtn" onclick="switchMode('search')">Search</button>
+  </div>
+
+  <!-- MAP STYLE SWITCHER -->
+<div class="map-style">
+  <select id="mapStyle" onchange="changeMapStyle()">
+  <option value="streets">Streets</option>
+  <option value="satellite">Satellite</option>
+  <option value="hybrid">Hybrid</option>
+  <option value="terrain">Terrain</option>
+  <option value="dark">Dark</option>
+  <option value="light">Light</option>
+  <option value="voyager">Voyager</option>
+</select>
+</div>
+
+  <!-- SEARCH PANEL -->
+  <div id="searchUI" class="search-panel hidden">
+    <input type="text" id="searchInput" placeholder="Search location...">
+    <button onclick="searchLocation()">Search</button>
+  </div>
+
+  <!-- MAP -->
+  <div id="map"></div>
+
+  <!-- FLOATING INFO PANEL -->
+  <div class="info-panel">
+
+    <div class="info-row">
+      <span>Latitude</span>
+      <span id="lat">--</span>
+    </div>
+
+    <div class="info-row">
+      <span>Longitude</span>
+      <span id="lon">--</span>
+    </div>
+
+    <div class="info-row">
+      <span>Pincode</span>
+      <span id="pincode">--</span>
+    </div>
+
+    <div class="info-row">
+      <span>Address</span>
+      <span id="address">--</span>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
