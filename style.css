@@ -124,9 +124,7 @@ body{
 
 .info-row:last-child{border:none;}
 
-.hidden{
-  display:none;
-}
+
 
 /* =========================
    MOBILE CLEAN LAYOUT FIX
@@ -189,4 +187,5 @@ body{
   }
 
 }
+
 
