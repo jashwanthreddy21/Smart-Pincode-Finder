@@ -85,7 +85,7 @@ smart-pincode-finder/
 
 ### 1️⃣ Clone Repository
 
-bash```
+```
 git clone https://github.com/jashwanthreddy21/Smart-Pincode-Finder.git
 ```
 
