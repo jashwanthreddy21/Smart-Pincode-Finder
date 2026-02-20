@@ -94,7 +94,7 @@ body{
   border-radius:6px;
 }
 
-.hidden{display:none;}
+
 
 /* MAP */
 #map{
@@ -132,6 +132,8 @@ body{
    MOBILE CLEAN LAYOUT FIX
 ========================= */
 @media(max-width:768px){
+
+ .hidden{display:none;} 
 
   /* HEADER */
   .header{
@@ -187,3 +189,4 @@ body{
   }
 
 }
+
