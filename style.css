@@ -129,7 +129,7 @@ body{
 /* FLOATING INFO PANEL */
 .info-panel{
   position:absolute;
-  bottom:0;
+  bottom:20px;
   left:0;
   width:100%;
   background:rgba(15,23,42,0.9);
@@ -184,4 +184,5 @@ body{
 @keyframes slideUp{
   from{transform:translateY(100%);}
   to{transform:translateY(0);}
+
 }
